@@ -1,5 +1,6 @@
 ﻿using System;
 
+//This is a simple Console Application to test Git
 namespace ConsoleTest
 {
     class Program
@@ -11,5 +12,3 @@ namespace ConsoleTest
         }
     }
 }
-
-//what is this
