@@ -6,7 +6,7 @@ namespace ConsoleTest
     class Program
     {
         static void Main(string[] args) {
-            Console.WriteLine("Git: Boom, Boom, Boom!");
+            Console.WriteLine(String.Format("{0}: Boom, Boom, Boom!", DateHelper.CurrentDate()));
             Console.WriteLine("Click any key to continue...");
             Console.ReadKey();
         }
