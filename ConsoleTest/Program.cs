@@ -7,7 +7,7 @@ namespace ConsoleTest
     {
         static void Main(string[] args) {
             Console.WriteLine(String.Format("{0}: Boom, Boom, Boom!", DateHelper.CurrentDate()));
-            Console.WriteLine("Click any key to continue...");
+            Console.WriteLine("Hit a key to continue...");
             Console.ReadKey();
         }
     }
