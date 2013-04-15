@@ -10,6 +10,7 @@ namespace ConsoleTest
             Console.WriteLine("Knock Knock?");
             Console.WriteLine("Actually, why did the chicken cross the road");
             Console.WriteLine("To get to the other side?");
+            Console.WriteLine("Maybe, but that would be too obvious don't you think?");
             Console.WriteLine("Click any key to continue...");
             Console.ReadKey();
         }
