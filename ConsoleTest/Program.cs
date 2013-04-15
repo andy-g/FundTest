@@ -7,6 +7,9 @@ namespace ConsoleTest
     {
         static void Main(string[] args) {
             Console.WriteLine(String.Format("{0}: Boom, Boom, Boom!", DateHelper.CurrentDate()));
+            Console.WriteLine("Enter your birth date");
+            var date = Console.ReadLine();
+            Console.WriteLine(DateHelper.YourAge(Convert.ToDateTime(date)));
             Console.WriteLine("Hit a key to continue...");
             Console.ReadKey();
         }
