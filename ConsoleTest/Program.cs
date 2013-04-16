@@ -10,6 +10,7 @@ namespace ConsoleTest
             Console.WriteLine("Enter your birth date");
             var date = Console.ReadLine();
             Console.WriteLine(DateHelper.YourAge(Convert.ToDateTime(date)));
+            Console.WriteLine(DateHelper.DaysToBirthday(Convert.ToDateTime(date)));
             Console.WriteLine("Hit a key to continue...");
             Console.ReadKey();
         }
