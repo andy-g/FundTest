@@ -9,6 +9,7 @@ namespace ConsoleTest
         }
 
         /// <summary>
+        /// Calculate the users age
         /// </summary>
         /// <param name="birthdate"></param>
         /// <returns></returns>
@@ -19,6 +20,9 @@ namespace ConsoleTest
             return String.Format("You are {0} years old", age);
         }
 
+        /// <summary>
+        /// Calculate the number of days until the users birthday
+        /// </summary>
         public static String DaysToBirthday(DateTime birthdate) {
             int daysToBirthday = (int)new DateTime(DateTime.Now.Year, birthdate.Month, birthdate.Day).Subtract(DateTime.Now.Date).TotalDays;
             if (daysToBirthday < 0)
