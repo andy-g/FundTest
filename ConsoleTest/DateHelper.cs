@@ -9,15 +9,13 @@ namespace ConsoleTest
         }
 
         /// <summary>
-        /// Calculate the users age
+        /// Bugs on purpose
         /// </summary>
         /// <param name="birthdate"></param>
         /// <returns></returns>
         public static String YourAge(DateTime birthdate)
         {
-            int age = DateTime.Today.Year - birthdate.Year;
-            if (birthdate > DateTime.Today.AddYears(-age)) age--;
-            return String.Format("You are {0} years old", age);
+            return String.Format("You are {0} years old", Math.Floor(DateTime.Now.Date.Subtract(birthdate).TotalDays / 365));
         }
 
         /// <summary>
