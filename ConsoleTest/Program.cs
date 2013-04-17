@@ -11,6 +11,7 @@ namespace ConsoleTest
             var date = Console.ReadLine();
             Console.WriteLine(DateHelper.YourAge(Convert.ToDateTime(date)));
             Console.WriteLine(DateHelper.DaysToBirthday(Convert.ToDateTime(date)));
+            Console.WriteLine(DateHelper.OutputStarSign(Convert.ToDateTime(date)));
             Console.WriteLine("Hit a key to continue...");
             Console.ReadKey();
         }

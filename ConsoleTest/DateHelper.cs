@@ -34,5 +34,23 @@ namespace ConsoleTest
                 return String.Format("There is 1 day until your birthday");
             return String.Format("There are {0} days until your birthday", daysToBirthday);
         }
+
+        public static String OutputStarSign(DateTime birthdate)
+        {
+            return String.Format("Your star sign is {0}.", StarSign(birthdate));
+        }
+
+        private static String StarSign(DateTime birthdate)
+        {
+            switch (birthdate.Month)
+            {
+                case 11:
+                    return birthdate.Day >= 1 && birthdate.Day <= 21 ? "Scorpio" : "Sagittarius";
+                case 12:
+                    return birthdate.Day >= 1 && birthdate.Day <= 21 ? "Sagittarius" : "Capricorn";
+                default:
+                    return "OF UNKNOWN COSMIC ORIGIN. YOU ARE AN ALIEN";
+            }
+        }
     }
 }
