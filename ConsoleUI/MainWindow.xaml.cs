@@ -29,23 +29,23 @@ namespace ConsoleUI
         {
             if (dateBirthDate.SelectedDate == null)
             {
-                MessageBox.Show("Please specify a birthdate first.");
+                MessageBox.Show("Please specify a birthdate first.", "Birthdate required.");
                 return;
             }
             DateTime birthDate = dateBirthDate.SelectedDate.GetValueOrDefault();
 
-            //FlowDocument myFlowDoc = new FlowDocument();
-            //myFlowDoc.Blocks.Add(new Paragraph(new Run(ConsoleTest.DateHelper.CurrentDate())));
-            //myFlowDoc.Blocks.Add(new Paragraph(new Run(ConsoleTest.DateHelper.YourAge(birthDate))));
-            //myFlowDoc.Blocks.Add(new Paragraph(new Run(ConsoleTest.DateHelper.DaysToBirthday(birthDate))));
-            //myFlowDoc.Blocks.Add(new Paragraph(new Run()));
+            FlowDocument myFlowDoc = new FlowDocument();
+            Paragraph DateInfoText = new Paragraph();
+            DateInfoText.Inlines.Add(new Bold(new Run(ConsoleTest.DateHelper.CurrentDate())));
+            DateInfoText.Inlines.Add(new LineBreak());
+            DateInfoText.Inlines.Add(ConsoleTest.DateHelper.YourAge(birthDate));
+            DateInfoText.Inlines.Add(new LineBreak());
+            DateInfoText.Inlines.Add(ConsoleTest.DateHelper.DaysToBirthday(birthDate));
+            DateInfoText.Inlines.Add(new LineBreak());
+            DateInfoText.Inlines.Add(ConsoleTest.DateHelper.OutputStarSign(birthDate));
 
-            //txtOutput.Document = myFlowDoc;
-            txtOutput.Text = String.Format("{0}\n{1}\n{2}\n{3}",
-                ConsoleTest.DateHelper.CurrentDate(),
-                ConsoleTest.DateHelper.YourAge(birthDate),
-                ConsoleTest.DateHelper.DaysToBirthday(birthDate),
-                ConsoleTest.DateHelper.OutputStarSign(birthDate));
+            myFlowDoc.Blocks.Add(DateInfoText);
+            rtbOutput.Document = myFlowDoc;
         }
     }
 }

@@ -3,10 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Date Information" Height="200" Width="450" MinWidth="400" MinHeight="200">
     <Grid Margin="0,0,2,0">
-        <Button x:Name="btnGetInfo" Content="Get Date Information" HorizontalAlignment="Left" Margin="81,40,0,0" VerticalAlignment="Top" Width="140" Click="btnGetInfo_Click"/>
+        <Button x:Name="btnGetInfo" Content="Get Date Information" HorizontalAlignment="Left" Margin="81,40,0,0" VerticalAlignment="Top" Width="140" Click="btnGetInfo_Click" TabIndex="2"/>
         <Label x:Name="lblBirthDate" Content="Birth Date:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <DatePicker x:Name="dateBirthDate" HorizontalAlignment="Left" Margin="81,11,0,0" VerticalAlignment="Top" Width="140"/>
-        <TextBlock x:Name="txtOutput" Margin="81,67,10,10" TextWrapping="Wrap" UseLayoutRounding="False" ScrollViewer.CanContentScroll="True"/>
+        <DatePicker x:Name="dateBirthDate" HorizontalAlignment="Left" Margin="81,11,0,0" VerticalAlignment="Top" Width="140" TabIndex="1"/>
+        <RichTextBox x:Name="rtbOutput" Margin="81,67,10,10" TabIndex="3" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
 
     </Grid>
 </Window>
